@@ -1,0 +1,12 @@
+<h1>Register</h1>
+<% if (error) { %>
+    <p>
+        <%= error %>
+    </p>
+    <% } %>
+
+        <form method="POST">
+            <input name="username" placeholder="Username">
+            <input name="password" type="password" placeholder="Password">
+            <button>Register</button>
+        </form>

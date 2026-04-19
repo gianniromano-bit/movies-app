@@ -1,0 +1,12 @@
+<h1>Login</h1>
+<% if (error) { %>
+    <p>
+        <%= error %>
+    </p>
+    <% } %>
+
+        <form method="POST">
+            <input name="username">
+            <input name="password" type="password">
+            <button>Login</button>
+        </form>
