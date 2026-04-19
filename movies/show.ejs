@@ -1,0 +1,22 @@
+<h1>
+    <%= movie.name %>
+</h1>
+
+<p>
+    <%= movie.description %>
+</p>
+<p>Year:
+    <%= movie.year %>
+</p>
+<p>Genres:
+    <%= movie.genres %>
+</p>
+<p>Rating:
+    <%= movie.rating %>
+</p>
+
+<a href="/movies/<%= movie._id %>/edit">Edit</a>
+
+<form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
+    <button>Delete</button>
+</form>
