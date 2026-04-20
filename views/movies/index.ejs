@@ -1,0 +1,15 @@
+<%- include('../partials/header.ejs', {title: 'Movies'}) %>
+
+<h2>All Movies</h2>
+<a href="/movies/new">Add Movie</a>
+<a href="/auth/logout">Logout</a>
+
+<ul>
+    <% movies.forEach(movie => { %>
+        <li>
+            <a href="/movies/<%= movie._id %>"><%= movie.name %></a>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('../partials/footer.ejs') %>

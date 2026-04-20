@@ -1,0 +1,17 @@
+<%- include('../partials/header.ejs', {title: movie.name}) %>
+
+<h2><%= movie.name %></h2>
+<p><%= movie.description %></p>
+<p>Year: <%= movie.year %></p>
+<p>Genres: <%= movie.genres.join(', ') %></p>
+<p>Rating: <%= movie.rating %></p>
+
+<a href="/movies/<%= movie._id %>/edit">Edit</a>
+
+<form method="POST" action="/movies/<%= movie._id %>?_method=DELETE">
+    <button type="submit">Delete</button>
+</form>
+
+<a href="/movies">Back to Movies</a>
+
+<%- include('../partials/footer.ejs') %>

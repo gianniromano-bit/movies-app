@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs', {title: 'Add Movie'}) %>
+
+<h2>Add Movie</h2>
+
+<% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+<% } %>
+
+<form action="/movies" method="POST" class="form-container">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+
+    <label for="year">Year</label>
+    <input type="number" name="year" id="year">
+
+    <label for="genres">Genres (comma separated)</label>
+    <input type="text" name="genres" id="genres" placeholder="Action,Drama">
+
+    <label for="rating">Rating</label>
+    <input type="number" name="rating" id="rating" step="0.1">
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description"></textarea>
+
+    <button type="submit" class="submit-btn">Add Movie</button>
+</form>
+
+<%- include('../partials/footer.ejs') %>

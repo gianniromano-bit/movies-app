@@ -1,0 +1,21 @@
+<%- include('../partials/header.ejs', {title: 'Login'}) %>
+
+<h2>Login</h2>
+
+<% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+<% } %>
+
+<form action="/auth/login" method="POST" class="form-container">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+
+    <button type="submit" class="submit-btn">Login</button>
+</form>
+
+<p>Don't have an account? <a href="/auth/register">Register</a></p>
+
+<%- include('../partials/footer.ejs') %>
