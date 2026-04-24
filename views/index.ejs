@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,4 +7,15 @@
 <body>
   <h1>Welcome to Movies App</h1>
 </body>
-</html>
+</html> -->
+
+<%- include('partials/header.ejs', {title: 'Home'}) %>
+
+<h1>Welcome to the Movies App</h1>
+<p>Manage Your Movie Collection</p>
+
+<a href="/auth/register">Register</a> |
+<a href="/auth/login">Login</a> |
+<a href="/movies">View All Movies</a>
+
+<%- include('partials/footer.ejs') %>
